@@ -208,8 +208,126 @@ html, body{
 .event-block:last-child{
     background-color: #d8d8d8;
 }
+
+.events-mobile{
+    display: none;
+}
 /* End of Practice session */
 
 /* Start of Mobile View */
-/* TODO */
+
+/* Start of Mobile Navigation */
+.mobile-nav{
+    display: none;
+}
+
+
+/* End of Mobile Navigation */
+
+/* Start of Media Query (to know if its mobile view) */
+
+/* Target size 640px (40rem width) */
+@media screen and (max-width: 40rem)
+{
+    /* hide desktop nav */
+    .desktop-nav{
+        display: none;
+    }
+
+    /* display mobile nav */
+    .mobile-nav{
+        display: flex;
+        grid-column: full--start/full--end;
+        align-items: center;
+        width: auto;
+        height: 4rem;
+        justify-content: space-around;
+    }
+
+
+    /* Header-picture, header contain */
+
+    .container{
+        max-width: 100dvw;
+    }
+
+    .header-picture{
+        grid-column: full--start/full--end;
+    }
+
+    .header-picture img{
+        padding: 0;
+    }
+
+    .header-content{
+        display: flex;
+        grid-column: full--start/full--end;
+        padding: 2rem 1rem 2rem 1rem;
+    }
+
+    .header-content div h1{
+        font-size:  xx-large;
+        padding: 0 0 2rem 0;
+    }
+
+    .header-content div h2{
+        font-size: larger;
+        padding: 0
+    }
+
+    .header-content div{
+        display: block;
+        width: 100%;
+    }
+
+    /* Practice, events */
+    .practice{
+        display: none;
+    }
+    
+    .events{
+
+        display: none;
+    }
+
+    .events-mobile{
+        /* To display mobile view! */
+        display: block; 
+        grid-column: full--start/full--end;
+        padding: 1rem;
+    }
+
+    .events-mobile .event-block{
+        grid-template-columns: 1fr;
+    }
+
+    .events-mobile .event-block img{
+        padding: 0;
+    }
+
+    .events-mobile .event-block-content{
+        padding: 2rem 0 2rem 1rem;
+        margin: 0;
+    }
+
+    .events-mobile .event-block-content h4{
+        font-size: xx-large;
+        font-weight: 600;
+    }
+
+    .events-mobile .event-block-content p{
+        font-size: large;
+        font-weight: lighter;
+    }
+
+    .events-mobile .event-block-content a:link{
+        font-size: large;
+    }
+
+
+}
+/* End of Media Query (to know if its mobile view) */
+
+
+
 /* End of Mobile View */
