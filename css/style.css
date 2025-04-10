@@ -216,8 +216,8 @@ html, body{
 
 /* Start of Mobile View */
 
-/* Start of Mobile Navigation */
-.mobile-nav{
+/* Start of Mobile Navigation (HIDE MOBILE FROM DESKTOP)*/
+.mobile-nav, #learning-section-mobile, .thesis-mobile, .learning-mobile1{
     display: none;
 }
 
@@ -229,10 +229,11 @@ html, body{
 /* Target size 640px (40rem width) */
 @media screen and (max-width: 40rem)
 {
-    /* hide desktop nav */
-    .desktop-nav{
+    /* hide desktop  */
+    .desktop-nav, #learning-section, .thesis {
         display: none;
     }
+    
 
     /* display mobile nav */
     .mobile-nav{
@@ -295,19 +296,26 @@ html, body{
         display: block; 
         grid-column: full--start/full--end;
         padding: 1rem;
+        
     }
 
     .events-mobile .event-block{
         grid-template-columns: 1fr;
+        border: none;
     }
 
     .events-mobile .event-block img{
         padding: 0;
+         
     }
 
     .events-mobile .event-block-content{
         padding: 2rem 0 2rem 1rem;
         margin: 0;
+        background-color: white;
+        border: none;
+
+        
     }
 
     .events-mobile .event-block-content h4{
@@ -324,6 +332,88 @@ html, body{
         font-size: large;
     }
 
+    
+
+/* learning section mobile */
+    #learning-section-mobile{
+        display: block;
+    }
+
+    .learning-mobile1{
+        grid-column: full--start/full--end;
+        padding: 0 1rem 2rem 1rem;
+        border-bottom: 1px solid #e7e7e7;
+        border-top: 1px solid #e7e7e7;
+    }
+
+    .projectcard-mobile{
+        background-color: #d8d8d8;  
+        padding: 1rem;
+        
+    }
+
+    .projectcard-mobile a{
+        text-decoration: none;
+    }
+
+    .projectcard-mobile a h4{
+        color: #565656;
+    }
+
+    .showcase-container-mobile{
+        display: grid;
+        gap: 8px;
+        grid-template-columns: 1fr;
+        
+    }
+
+
+    
+
+/* end learning section mobile */
+
+/* start of thesis mobile */
+
+.thesis-mobile{
+    display: block;
+    grid-column: full--start/full--end;
+    padding: 2rem 0 1.5rem 0;
+}
+
+.thesis-container-mobile{
+    grid-template-columns: 1fr;
+}
+
+.video-container-mobile video{
+    width: 100%;
+    height: auto;
+
+ }
+
+ .thesis-mobile h1{
+    text-align: center;
+    color: #4a4a4a;
+    padding-bottom: 1rem;
+ }
+
+
+
+
+
+/* end of thesis mobile */
+
+/* Start of footer mobile */
+footer{
+    padding: 1rem;
+}
+.footerlist li{
+    display: none;
+}
+
+
+/* End of footer mobile */
+
+
 
 }
 /* End of Media Query (to know if its mobile view) */
@@ -331,3 +421,197 @@ html, body{
 
 
 /* End of Mobile View */
+
+/* Start of Learning Section */
+
+#learning-section{
+
+    grid-column: full--start/full--end;
+    background-color: #eaebec;
+    padding: 0 4.5rem;
+    
+}
+.section-title{
+    color: #4a4a4a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 2rem 0;
+   
+   
+}
+
+.showcase-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 0 2rem 0;
+}
+
+.projectcard{
+    font-size: small;
+    background-color:white;
+    padding: 0 0 10px 0;
+   
+}
+
+
+.projectcard img{
+    display: block;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+.projectcard h4{
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+
+}
+
+.projectcard a p:first-of-type {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+}
+
+.projectcard a p:last-of-type{
+    padding: 0 1rem 1.5rem 1rem;
+    color: #a0a0a0;
+    letter-spacing: 1px;
+}
+  
+.projectcard a{
+    text-decoration: none;
+}
+
+.thesis{
+    grid-column: full--start/full--end;
+    
+}
+
+.thesis-container{
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+}
+
+ .thesis h1{
+    text-align: center;
+    padding: 2rem 0;
+    color:#4a4a4a;
+    font-weight: 800;
+ }    
+
+ .thesis-left .video-container{
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    
+ }
+
+.thesis-left h3{
+    padding: 0 0 0.5rem 1.5rem;
+    color: #484848;
+}
+
+.thesis-left p{
+    padding: 0 0 2rem 1.5rem;
+    color:#969696;
+}
+
+
+ .video-container video{
+    
+    width: 100%;
+    height: auto;
+
+ }
+
+
+ 
+ .thesis-right{
+    display: grid;
+    grid-template-rows: repeat(3,min-content);
+    
+}
+
+.thesis-news{
+    display: grid;
+    grid-template-columns: 0.35fr 0.65fr;
+    align-items: center;
+    font-size: small;
+    color: #484848;
+}
+
+.thesis-news img{
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.thesis-news-content{
+    margin: 0 2rem;
+}
+
+.thesis-news-content p{
+    font-size: 0.8rem;
+    padding: 0.5rem 0rem;
+    color:#969696;
+    letter-spacing: 0.8px;
+}
+
+.thesis-news-content h4{
+    font-size: 1.2rem;
+    color: #484848;
+    letter-spacing: 0.8px;
+}
+
+
+
+.thesis-news:first-child
+{
+    background-color: #f0f0f0;
+}
+
+footer{
+    border-top: 1px solid #e7e7e7;
+    grid-column: full--start/full--end;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+
+}
+
+footer ul{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footerlist li{
+    list-style-type: none;
+    
+}
+
+.footer-item a{
+    text-decoration: none;
+    color:#969696;
+}
+
+.copyright{
+    color:#969696;
+}
+
+
+        
+   
+         
+
+
+   
+/* End of Learning Section */
